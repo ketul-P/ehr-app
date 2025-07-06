@@ -6,14 +6,17 @@ const authRoutes = require("./routes/auth")
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+//app.use(express.urlencoded({ extended: true }));
+//app.use(express.json());
 
-app.get("/", (req,res)=>{
+app.get("/index", (req,res)=>{
     res.send("EHR is running!")
 })
 
-app.use("/auth", authRoutes)
+//app.use("/auth", authRoutes)
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+//const PORT = process.env.PORT || 3000;
+
+//app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
+app.listen(4000, () => console.log(`Server is running on port 4000`));

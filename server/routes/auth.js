@@ -1,7 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const { PrismaClient } = require("@prisma/client");
-const validateCredentials = require("./middleware/validateCredentials")
+const validateCredentials = require("../middleware/validateCredentials")
 
 const router = express.Router();
 const prisma = new PrismaClient();
@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
 router.use(express.json());
 router.use(express.urlencoded({extended: true}));
 
-router.post("/login", validateCredentials, async (req, res) => {
+router.post("./client/public/index", validateCredentials, async (req, res) => {
   const { email, password } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
 
