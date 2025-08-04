@@ -1,5 +1,3 @@
-// app/admin/patients/new/page.tsx
-
 export default function NewPatientForm() {
   return (
     <main id="form" className="min-h-screen bg-white flex justify-center">
