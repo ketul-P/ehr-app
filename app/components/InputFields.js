@@ -11,7 +11,7 @@ export function InputBasic({name, type, placeHolder, focusOutline}){
                 name=        {name}
                 type=        {type} 
                 placeholder= {placeHolder}
-                className=   {`border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-${focusOutline} p-2`}
+                className=   {`border bg-white text-gray-800 border-gray-300 rounded-md  focus:outline-none focus:border-${focusOutline} p-2`}
         />
     );
 }
@@ -23,7 +23,7 @@ export function InputBasicRequired({name, type, placeHolder, focusOutline}){
                 name=        {name} 
                 type=        {type}
                 placeholder= {placeHolder}
-                className=   {`border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-${focusOutline} p-2`}
+                className=   {`border bg-white text-gray-800 border-gray-300 rounded-md w-full focus:outline-none focus:border-${focusOutline} p-2`}
                 required
         />
     );

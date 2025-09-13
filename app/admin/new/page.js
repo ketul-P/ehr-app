@@ -1,4 +1,5 @@
-import { InputBasic, InputBasicRequired } from "../../components/InputFields";
+import { CancelButton, SecondaryButton, PrimaryButton } from '../../components/customButtons'
+import { InputBasicRequired } from '../../components/inputFields';
 
 export default function NewPatientForm() {
   return (
@@ -24,9 +25,7 @@ export default function NewPatientForm() {
 
                 {/* Personal Info */}
                 <p className="text-emerald-600 p-0.5 mb-2">Personal Information</p>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-
                     {/* First Name */}
                     <InputBasicRequired
                         name="firstName"
@@ -34,7 +33,6 @@ export default function NewPatientForm() {
                         placeHolder="First Name"
                         focusOutline="emerald-400"
                     />
-
                     {/* Last Name */}
                     <InputBasicRequired
                         name="lastName"
@@ -42,7 +40,6 @@ export default function NewPatientForm() {
                         placeHolder="Last Name"
                         focusOutline="emerald-400"
                     />
-
                     {/* DOB */}
                     <InputBasicRequired
                         name="doB"
@@ -50,14 +47,13 @@ export default function NewPatientForm() {
                         placeHolder="Date of Birth"
                         focusOutline="emerald-400"
                     />
-
+                    {/* Gender */}
                     <select name="gender" className="border text-gray-800 bg-white border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required>
                         <option value="">Select Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
-
                     {/* Phone Number */}
                     <InputBasicRequired
                         name="phoneNumber"
@@ -65,7 +61,6 @@ export default function NewPatientForm() {
                         placeHolder="Phone Number (###)-###-####"
                         focusOutline="emerald-400"
                     />
-
                     {/* E-Mail */}
                     <InputBasicRequired
                         name="eMail"
@@ -78,16 +73,42 @@ export default function NewPatientForm() {
                 {/* Address */}
                 <p className="text-emerald-600 p-0.5 mb-2">Address</p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <input name="street" placeholder="Street Address" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required />
-                    <input name="unit"  placeholder="Unit" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required />
-                    <input name="postalCode" placeholder="Postal Code" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required />
-                    <input name="city" placeholder="City" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required />
+                    {/* Street Address */}
+                    <InputBasicRequired
+                        name="street"
+                        type="text"
+                        placeHolder="Street Address"
+                        focusOutline="emerald-400"
+                    />
+                    {/* Unit */}
+                    <InputBasicRequired
+                        name="unit"
+                        type="text"
+                        placeHolder="Unit"
+                        focusOutline="emerald-400"
+                    />
+                    {/* Postal Code */}
+                    <InputBasicRequired
+                        name="postalCode"
+                        type="text"
+                        placeHolder="Postal Code"
+                        focusOutline="emerald-400"
+                    />
+                    {/* City */}
+                    <InputBasicRequired
+                        name="city"
+                        type="text"
+                        placeHolder="City"
+                        focusOutline="emerald-400"
+                    />
+                    {/* Province */}
                     <select name="province" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required>
                         <option value="">Select Province</option>
                         <option value="ON">Ontario</option>
                         <option value="QC">Quebec</option>
                         <option value="MN">Manitoba</option>
                     </select>
+                    {/* Country */}
                     <select name="country" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" required>
                         <option value="">Select Country</option>
                         <option value="CA">Canada</option>
@@ -99,37 +120,65 @@ export default function NewPatientForm() {
                 {/* Emergency Contact */}
                 <p className="text-emerald-600 p-0.5 mb-2">Emergency Contact</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                    <input name="emergencyContactName" placeholder="Emergency Contact Name" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2"/>
-                    <input name="emergencyContactPhone" placeholder="Emergency Contact Phone" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2"/>
+                    <InputBasicRequired
+                        name="emergencyContactName"
+                        type="text"
+                        placeHolder="Emergency Contact Name"
+                        focusOutline="emerald-400"
+                    />
+                    <InputBasicRequired
+                        name="emergencyContactNumber"
+                        type="text"
+                        placeHolder="Emergency Contact Number"
+                        focusOutline="emerald-400"
+                    />
                 </div>
 
                 {/* Insurance */}
                 <p className="text-emerald-600 p-0.5 mb-2">Insurance Provider</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                    <input name="insuranceProvider" placeholder="Insurance Provider" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" />
-                    <input name="policyNumber" placeholder="Policy Number" className="border bg-white text-gray-800 border-gray-300 rounded-md focus:outline-none focus:border-emerald-400 p-2" />
+                    <InputBasicRequired
+                        name="insuranceName"
+                        type="text"
+                        placeHolder="Insurance Provider"
+                        focusOutline="emerald-400"
+                    />
+                    <InputBasicRequired
+                        name="insuranceNumber"
+                        type="text"
+                        placeHolder="Policy Number"
+                        focusOutline="emerald-400"
+                    />
                 </div>
 
                 {/* Consent */}
                 <div className="mt-4">
-                    <input type="checkbox" required className= "mr-2"/><label className="text-emerald-600 underline hover:cursor-pointer">I consent to storing my information securely.</label>
+                    <InputBasicRequired
+                        name="consent"
+                        type="checkbox"
+                        placeHolder=""
+                        focusOutline="emerald-400"
+                    />
+                    <label className="ml-2 text-emerald-600 underline hover:cursor-pointer">I consent to storing my information securely.</label>
                 </div>
 
-                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <button type="clear" className="mt-6 w-full rounded bg-emerald-400 text-emerald-800 p-2 hover:bg-emerald-600 ">
-                        Cancel
-                    </button>
-
-                    <button type="clear" className="mt-6 w-full rounded bg-emerald-400 text-emerald-800 p-2 hover:bg-emerald-600">
-                        Clear
-                    </button>
-
-                    <button type="submit" className="mt-6 w-full rounded bg-emerald-700 text-white p-2 hover:hover:bg-emerald-900">
-                        Add Patient
-                    </button>
+                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
+                    {/* Cancel and go back */}
+                    <CancelButton
+                        value="Cancel"
+                    />
+                    {/* Clear */}
+                    <SecondaryButton
+                        value="Clear"
+                    />
+                    {/* Save and Update */}
+                    <PrimaryButton
+                        value="Save"
+                    />
                  </div>
             </form>
         </div>
     </main>
   );
 }
+ 
