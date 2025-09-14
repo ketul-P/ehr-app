@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
-import prisma from "./db.js";
+import bcrypt from "../../node_modules/bcrypt";
+import prisma from "../../node_modules/prisma"
 
 export async function verifyLogin(username, password) {
   const user = await prisma.user.findUnique({
