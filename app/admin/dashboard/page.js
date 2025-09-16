@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from 'next/navigation';
-import { AdminDashboardTile } from '../../components/optionTiles'
+import { AdminDashboardTile } from 'app/components/optionTilesn'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUsers, faCalendarCheck, faUserDoctor, faPrescription, faArrowRight, faArrowRightFromFile, faArrowUpRightFromSquare, faArrowUpRightDots, faSquareArrowUpRight} from '@fortawesome/free-solid-svg-icons';
 
