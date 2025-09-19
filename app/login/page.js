@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react"
-import { InputBasicRequired } from "app/components/inputFields";
-import { InputBasic } from "app/components/inputFields";
+  import { InputBasicRequired } from "app/components/InputFields";
+import { InputBasic } from "app/components/InputFields";
 import { PrimaryButton } from "app/components/customButtons";
 
 export default function LoginForm() {
