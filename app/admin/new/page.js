@@ -1,4 +1,4 @@
-import { CancelButton, SecondaryButton, PrimaryButton } from 'app/components/customButtons'
+import { CancelButton, SecondaryButton, PrimaryButton } from 'app/components/CustomButtons'
 import { InputBasicRequired } from 'app/components/inputFields';
 
 export default function NewPatientForm() {

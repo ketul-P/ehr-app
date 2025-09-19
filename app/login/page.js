@@ -3,7 +3,7 @@
 import { useState } from "react"
   import { InputBasicRequired } from "app/components/inputFields";
 import { InputBasic } from "app/components/inputFields";
-import { PrimaryButton } from "app/components/customButtons";
+import { PrimaryButton } from "app/components/CustomButtons";
 
 export default function LoginForm() {
 
