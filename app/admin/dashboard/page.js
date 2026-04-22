@@ -2,8 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import { AdminDashboardTile } from 'app/components/OptionTiles'
+import { InputBasic } from 'app/components/InputFields';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUsers, faCalendarCheck, faUserDoctor, faPrescription, faArrowRight, faArrowRightFromFile, faArrowUpRightFromSquare, faArrowUpRightDots, faSquareArrowUpRight} from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faCalendarCheck, faUserDoctor, faPrescription, faArrowRight, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 
 
 export default function AdminDashboard(){
@@ -32,17 +33,22 @@ export default function AdminDashboard(){
             </div>
 
             <div id="dashboard" className="bg-emerald-50 px-16">
-                <div id="title" className="py-8 border">
+                <div id="title" className="py-8">
                     <h1 className="text-sm md:text-2xl lg:text-4xl font-mono font-semibold text-emerald-700 mb-4">
                         Dashboard
                     </h1>
-                    <div id="dashBoardSearch" className='flex mb-2 mt-12'>
-                        <input className='text-gray-600 border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-emerald-400' placeholder='Search options...'/>
-                        <FontAwesomeIcon icon={faSquareArrowUpRight} className="text-3xl text-emerald-600"/> 
+                    <div id="dashBoardSearch" className='flex mb-2 mt-12 align-middle'>
+                        <InputBasic
+                            name="searchTile"
+                            type="text"
+                            placeHolder="Search Options..."
+                            focusOutline="emerald-400"
+                        />
+                        <FontAwesomeIcon icon={faMagnifyingGlass} className="text-2xl text-emerald-500 pt-2 pl-2"/> 
                     </div>
                 </div>
                 
-                <div id="options" className='grid grid-cols-4 grid-rows-3 gap-10'>
+                <div id="options" className='grid grid-cols-5 grid-rows-3 gap-10'>
                     <AdminDashboardTile
                         title="Patient"
                         icon={faUsers}
@@ -70,9 +76,17 @@ export default function AdminDashboard(){
                     <AdminDashboardTile
                         title="Prescriptions"
                         icon={faPrescription}
-                        buttonText="Check Prescription"
+                        buttonText="Look up"
                         infoText="Total 135 Prescriptions"
                         onClick={addNewRx}
+                    />
+                    
+                    <AdminDashboardTile
+                        title="Patient"
+                        icon={faUsers}
+                        buttonText="Add Patient"
+                        onClick={addNewPatient}
+                        infoText="Total 213 patients"
                     />
                 </div>
 
