@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A lightweight Electronic Health Records (EHR) system built for small clinics to manage patient records, appointments, and clinical notes without the overhead of large enterprise EHR platforms.
 
-## Getting Started
 
-First, run the development server:
+Status: 🚧 Work in progress. Core features are functional but the app is still being actively developed and tested.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Background
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project draws on lessons learned from working with enterprise-grade EHR/EMR systems (Meditab Software), scaled down and simplified for the needs of small, independent clinics. The goal is to keep the core value of an EHR — accurate, accessible patient records — without the complexity and cost that make enterprise systems impractical for small practices.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Features
 
-## Learn More
+Patient Records — Create, view, and update patient demographic and medical history information
+Appointment Scheduling — Book, reschedule, and cancel patient appointments
+Clinical Notes — Record visit notes, diagnoses, and treatment plans per patient
+Search & Filter — Quickly locate patient records by name, ID, or visit date
+Basic Reporting — Generate simple summaries of patient visits and clinic activity
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Features marked above reflect the current/planned scope and may not all be fully implemented yet!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Framework: Next.js
+Database: e.g., PostgreSQL
+ORM: e.g., Prisma
+Styling: e.g., Tailwind CSS
